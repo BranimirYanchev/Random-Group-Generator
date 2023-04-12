@@ -1,0 +1,22 @@
+.col{
+    display: flex;
+    flex-direction: column;
+}
+
+.cols{
+    display: flex;
+}
+
+.teams{
+    display: contents;
+}
+
+.draw-button{
+    width: 100px;
+    height: 40px;
+    background: #fe4f0c;
+}
+
+.draw-button:hover{
+    cursor: pointer;
+}

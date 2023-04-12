@@ -1,0 +1,27 @@
+.clear-btn{
+    background: #04841d;
+    text-transform: uppercase;
+    color: #f3fff4;
+}
+
+.groups >.p{
+    margin-left: 20px;
+}
+
+.groups{
+    display: contents;
+}
+
+.group-row{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/*.group-col{*/
+/*    display: flex;*/
+/*}*/
+
+.group > p{
+    margin-left: 30px;
+}
