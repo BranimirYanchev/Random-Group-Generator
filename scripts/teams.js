@@ -1,14 +1,25 @@
 // Define team section
-var teamsCount = $("input[name = 'teams-count']").val();//Number of teams
+let teamsCount = $("input[name = 'teams-count']").val();//Number of teams
 const teams = $('.teams');// Team container
 const teamCols = [$('#col-1'), $('#col-2'), $('#col-3'), $('#col-4')];//Teams columns
-const teamFields = [];
-
-let i = 0;
+let teamFields = [];
+let teamValues = [];
 
 //Add click event to buttons
-$('.run-btn').click(() =>{
+$('.run-btn').on('click', () =>{
+    clearEl('team');
+    teams.removeClass('display-none')
     teamsCount = $("input[name = 'teams-count']").val();
-    fillCols(createFields, teamsCount, teamCols, 'team');
+
+    createFields(teamFields,'team');
+    fillCols((teamsCount / 4), teamFields, teamCols, genIndex);
+    teamFields = $('.team-fields');
 });
+
+function genIndex(len){
+    return 0;
+}
+
+
+
 

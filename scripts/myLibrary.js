@@ -1,58 +1,64 @@
-function fillCols(func, length, cols, type){
-    i = 0;
-
-    if(type == 'team' || cols.length == 4){
-        if(length % 4 == 0){
-            for (let j = 0; j < length / 4; j++){
-                for(let k = 0; k < cols.length; k++) {
-                    func(cols[k], type);
-                }
+function fillCols(namesPerGroup, fields, cols, func){
+    console.log(fields);
+    cols.forEach(function(e) {
+        for (let j = 0; j < namesPerGroup; j++) {
+            let index = func(fields.length);
+            if(fields[index]){
+                e.append(fields[index]);
             }
-        }else {
-            for (let j = 0; j < Math.round(length / 4); j++) {
-                if (length % 4 == 1 && j + 1 == Math.round(length / 4) && i <= length) {
-                    func(cols[0], type);
-                    break;
-                } else if (length % 4 == 2 && j + 1 == Math.round(length / 4) && i <= length) {
-                    func(cols[0], type);
-                    func(cols[1], type);
-                    break;
-                } else if (length % 4 == 3 && j + 1 == Math.round(length / 4) && i <= length) {
-                    func(cols[0], type);
-                    func(cols[1], type);
-                    func(cols[2], type);
-                    break;
-                }
-                for (let k = 0; k < cols.length; k++) {
-                    func(cols[k], type);
-                }
-            }
+            fields.splice(index, 1);
+            length--;
         }
-    // }else{
-    //     for (let j = 0; j < cols.length ; j++){
-    //         for (let k = 0; k < Math.trunc( teamsCount / cols.length); k++){
-    //             func(cols[k], type);
-    //         }
-    //     }
-    // }
-    teams.removeClass('display-none');
+    });
 }
-function createFields(col, type) {
-    i++;
-    if(type == 'group'){
-        let fieldClass = 'border-radius margin margin-left ' + type + 'Fields'
+function createFields(arr, type) {
+    for(let j = 1; j <= teamsCount; j++){
+        let fieldClass = 'border-radius margin ' + type + '-fields'
         let field = document.createElement('input');
+
         field.setAttribute('type', 'text');
         field.setAttribute('class', fieldClass);
-        field.setAttribute('value', 'team-' + i);
-        col.append(field);
-    }else{
-        let fieldClass = 'border-radius margin ' + type + 'Fields'
-        let field = document.createElement('input');
-        field.setAttribute('type', 'text');
-        field.setAttribute('class', fieldClass);
-        field.setAttribute('value', 'team-' + i);
-        col.append(field);
+        field.setAttribute('value', 'team-' + j);
+
+        arr.push(field);
+
+        if(type == 'group'){
+            field.setAttribute('class', fieldClass + ' margin-left');
+        }
     }
+}
+
+function clearEl(type) {
+    if (type == 'group') {
+        if(groupCols[0] != undefined){
+            groupCols.forEach(e => {
+                e.remove();
+            })
+        }
+
+
+        groupFields = [];
+        $('.group-field').toArray().forEach(e => {
+            e.remove();
+        });
+
+        groups.attr('class', 'groups display-none');
+
+        $('.clear-btn').remove();
+    }else{
+        teamCols.forEach(function (e) {
+            e.empty();
+        });
+
+        teamFields = [];
+
+        $('.team-field').toArray().forEach(e => {
+            e.remove();
+        });
+
+        teams.attr('class', 'teams display-none');
+
+    }
+
 
 }
