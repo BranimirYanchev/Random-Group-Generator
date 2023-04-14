@@ -11,6 +11,7 @@ function fillCols(namesPerGroup, fields, cols, func){
         }
     });
 }
+
 function createFields(arr, type) {
     for(let j = 1; j <= teamsCount; j++){
         let fieldClass = 'border-radius margin ' + type + '-fields'

@@ -94,5 +94,3 @@ function setRandVal(fields){
         length--;
     })
 }
-
-

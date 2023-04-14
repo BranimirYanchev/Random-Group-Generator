@@ -3,7 +3,6 @@ let teamsCount = $("input[name = 'teams-count']").val();//Number of teams
 const teams = $('.teams');// Team container
 const teamCols = [$('#col-1'), $('#col-2'), $('#col-3'), $('#col-4')];//Teams columns
 let teamFields = [];
-let teamValues = [];
 
 //Add click event to buttons
 $('.run-btn').on('click', () =>{
@@ -15,11 +14,6 @@ $('.run-btn').on('click', () =>{
     fillCols((teamsCount / 4), teamFields, teamCols, genIndex);
     teamFields = $('.team-fields');
 });
-
-$('#clear-btn').click((e) => {
-    e.preventDefault();
-    clearEl('group');
-})
 
 function genIndex(len){
     return 0;
