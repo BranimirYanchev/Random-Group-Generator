@@ -18,7 +18,3 @@ $('.run-btn').on('click', () =>{
 function genIndex(len){
     return 0;
 }
-
-
-
-

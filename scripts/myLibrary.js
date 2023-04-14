@@ -60,4 +60,3 @@ function clearEl(type) {
         teams.attr('class', 'teams display-none');
     }
 }
-
