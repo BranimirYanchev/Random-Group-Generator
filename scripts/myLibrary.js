@@ -29,14 +29,14 @@ function createFields(arr, type) {
 }
 
 function clearEl(type) {
-    if (type == 'group') {
-        if(groupCols[0] != undefined){
-            groupCols.forEach(e => {
-                e.remove();
-            })
-        }
+    if (type == 'group' && groupCols[0] != undefined) {
+
+        groupCols.forEach(e => {
+            e.remove();
+        });
 
         groupFields = [];
+
         $('.group-field').toArray().forEach(e => {
             e.remove();
         });
@@ -44,6 +44,7 @@ function clearEl(type) {
         groups.attr('class', 'groups display-none');
 
         $('.clear-btn').remove();
+
     }else{
         teamCols.forEach(function (e) {
             e.empty();
@@ -56,7 +57,6 @@ function clearEl(type) {
         });
 
         teams.attr('class', 'teams display-none');
-
     }
 }
 
