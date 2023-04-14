@@ -46,6 +46,7 @@ function createGroupCols(count) {
         groupRows[0].append(div);
     }
 }
+
 function createGroupRows(count){
     let row = createElement('group-row', 'div');
     if(count > 4){//Check if it needs to create more than one row
@@ -58,9 +59,11 @@ function createGroupRows(count){
         groups.append(row);
     }
 }
+
 function genRandIndex(length){
     return Math.floor(Math.random() * length);
 }
+
 function createElement(className, elType){
     let element = document.createElement(elType);
 
@@ -68,6 +71,7 @@ function createElement(className, elType){
 
     return element;
 }
+
 function createClearButton(){
     let button = document.createElement('button');
 
@@ -78,6 +82,7 @@ function createClearButton(){
 
     groups.append(button);
 }
+
 function setRandVal(fields){
     let newFields = fields.toArray();
     let length = teamsCount;
