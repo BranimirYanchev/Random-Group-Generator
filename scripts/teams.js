@@ -16,6 +16,11 @@ $('.run-btn').on('click', () =>{
     teamFields = $('.team-fields');
 });
 
+$('#clear-btn').click((e) => {
+    e.preventDefault();
+    clearEl('group');
+})
+
 function genIndex(len){
     return 0;
 }

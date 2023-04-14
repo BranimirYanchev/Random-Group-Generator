@@ -36,7 +36,6 @@ function clearEl(type) {
             })
         }
 
-
         groupFields = [];
         $('.group-field').toArray().forEach(e => {
             e.remove();
@@ -59,6 +58,5 @@ function clearEl(type) {
         teams.attr('class', 'teams display-none');
 
     }
-
-
 }
+
