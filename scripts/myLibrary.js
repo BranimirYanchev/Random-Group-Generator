@@ -1,5 +1,4 @@
 function fillCols(namesPerGroup, fields, cols, func){
-    console.log(fields);
     cols.forEach(function(e) {
         for (let j = 0; j < namesPerGroup; j++) {
             let index = func(fields.length);
@@ -30,8 +29,7 @@ function createFields(arr, type) {
 }
 
 function clearEl(type) {
-    if (type == 'group' && groupCols[0] != undefined) {
-
+    if (type == 'group') {
         groupCols.forEach(e => {
             e.remove();
         });
@@ -45,7 +43,6 @@ function clearEl(type) {
         groups.attr('class', 'groups display-none');
 
         $('.clear-btn').remove();
-
     }else{
         teamCols.forEach(function (e) {
             e.empty();

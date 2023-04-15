@@ -7,8 +7,8 @@ let groupFields = [];//Fields container
 const letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I','J','K','L','M','O','P','Q','R','S','T','U','V','W','X', 'Y', 'Z'];
 
 // Add click event on Draw Button and call functions
-$('#draw-button').click(() =>{
-    clearEl('group');
+$('#draw-button').on('click', () =>{
+    clearEl('group', groupCols);
     groupsCount = $("input[name = 'groups-count']").val();
     createGroupRows(groupsCount);
     groupRows = $('.group-row')
@@ -19,12 +19,17 @@ $('#draw-button').click(() =>{
     fillCols((teamsCount / groupsCount), groupFields, groupCols, genRandIndex);
     groupFields = $('.group-fields');
     createClearButton();
+
+    $('#clear-btn').on('click',() => {
+        clearEl('group');
+    })
     setRandVal($('.team-fields'));
 });
 
 // Some functions
 function createGroupCols(count) {
     // Show groups
+
     groups.removeClass('display-none');
 
     for (let j = 0; j < count; j++){
@@ -78,7 +83,6 @@ function createClearButton(){
     button.setAttribute('class', 'clear-btn draw-button btn-style border-radius border-none');
     button.innerHTML = '<span class="btn-text">' + 'Clear' + '</span>';
     button.setAttribute('id','clear-btn');
-    button.setAttribute('onclick', ' clearEl(\'group\')');
 
     groups.append(button);
 }

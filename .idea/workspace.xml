@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="fbb38ee6-05d3-4f0b-b787-8f39e7c0d010" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/groups.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/groups.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/myLibrary.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/myLibrary.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/teams.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/teams.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +40,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/35987/Documents/GitHub/Random-Group-Generator",
+    "last_opened_file_path": "/Users/branimiryanchev/Desktop/Random Group Generator",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -71,6 +71,7 @@
       <workItem from="1681472549392" duration="35000" />
       <workItem from="1681502403109" duration="2942000" />
       <workItem from="1681506069051" duration="652000" />
+      <workItem from="1681570896909" duration="1893000" />
     </task>
     <servers />
   </component>
