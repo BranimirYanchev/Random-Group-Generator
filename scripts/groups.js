@@ -29,7 +29,7 @@ $('#draw-button').on('click', () =>{
 // Some functions
 function createGroupCols(count) {
     // Show groups
-
+    console.log(count)
     groups.removeClass('display-none');
 
     for (let j = 0; j < count; j++){
@@ -43,12 +43,14 @@ function createGroupCols(count) {
         div.append(p);
 
         // Append div to group row
-        if(count > 4 && j >= 4){//Check if groupRows have more than one element
+        if(count >= 4 && j >= 4){//Check if groupRows have more than one element
+            console.log(j / 4)
             groupRows[Math.trunc(j / 4)].append(div);
-            break;
+        }else{
+            groupRows[0].append(div);
         }
 
-        groupRows[0].append(div);
+
     }
 }
 
