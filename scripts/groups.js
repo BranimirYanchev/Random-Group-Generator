@@ -16,12 +16,13 @@ $('#draw-button').on('click', () =>{
     groupCols = $('.group-col').toArray();
     i = 0;
     createFields(groupFields,'group');
-    fillCols((teamsCount / groupsCount), groupFields, groupCols, genRandIndex);
+    fillCols((teamsCount / groupsCount), groupFields, groupCols, genRandIndex, parseInt(groupsCount));
     groupFields = $('.group-fields');
     createClearButton();
 
     $('#clear-btn').on('click',() => {
         clearEl('group');
+        clearEl('team');
     })
     setRandVal($('.team-fields'));
 });

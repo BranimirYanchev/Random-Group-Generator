@@ -11,7 +11,7 @@ $('.run-btn').on('click', () =>{
     teamsCount = $("input[name = 'teams-count']").val();
 
     createFields(teamFields,'team');
-    fillCols((teamsCount / 4), teamFields, teamCols, genIndex);
+    fillCols((teamsCount / 4), teamFields, teamCols, genIndex, 4);
     teamFields = $('.team-fields');
 });
 
