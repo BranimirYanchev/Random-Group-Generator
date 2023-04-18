@@ -8,7 +8,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/groups.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/groups.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/someFunctions.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/someFunctions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/teams.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/teams.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +72,7 @@
       <workItem from="1681502403109" duration="2942000" />
       <workItem from="1681506069051" duration="652000" />
       <workItem from="1681570896909" duration="3453000" />
-      <workItem from="1681839461499" duration="1667000" />
+      <workItem from="1681839461499" duration="3905000" />
     </task>
     <servers />
   </component>

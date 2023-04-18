@@ -2,25 +2,18 @@ function fillCols(namesPerGroup, fields, cols, func, count){
     if(teamsCount % groupsCount !== 0) {
         let k = 0;
         for (let j = 0; j < teamsCount; j++){
-            let index = func(fields.length);
-            if(fields[index]){
-                cols[k].append(fields[index]);
-            }
-            fields.splice(index, 1);
-            length--;
+            appendField(func, fields, length, cols[k]);
             k++;
+
             if(k === count){
                 k = 0;
             }
+
         }
     } else{
         cols.forEach(function(e) {
             for (let j = 0; j < namesPerGroup; j++) {
-                let index = func(fields.length);
-                if(fields[index]){
-                    e.append(fields[index]);
-                }
-                fields.splice(index, 1);
+                appendField(func, fields, length, e);
                 length--;
             }
         });
@@ -74,4 +67,13 @@ function clearEl(type) {
 
         teams.attr('class', 'teams display-none');
     }
+}
+
+function appendField(func, fields, length, e){// Append fields to columns
+    let index = func(fields.length);
+    if(fields[index]){
+        e.append(fields[index]);
+    }
+    fields.splice(index, 1);
+    length--;
 }

@@ -10,15 +10,16 @@ const letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I','J','K','L','M','O'
 $('#draw-button').on('click', () =>{
     clearEl('group', groupCols);
     groupsCount = $("input[name = 'groups-count']").val();
+
+    // Create group columns and rows
     createGroupRows(groupsCount);
-    groupRows = $('.group-row')
     createGroupCols(groupsCount);
-    groupCols = $('.group-col').toArray();
+
     i = 0;
-    createFields(groupFields,'group');
-    fillCols((teamsCount / groupsCount), groupFields, groupCols, genRandIndex, parseInt(groupsCount));
+    createFields(groupFields,'group');// Create group fields
+    fillCols((teamsCount / groupsCount), groupFields, groupCols, genRandIndex, parseInt(groupsCount));// Append fields to group columns
     groupFields = $('.group-fields');
-    createClearButton();
+    setClearBtn();// Create and append clear button
 
     $('#clear-btn').on('click',() => {
         clearEl('group');
@@ -30,7 +31,6 @@ $('#draw-button').on('click', () =>{
 // Some functions
 function createGroupCols(count) {
     // Show groups
-    console.log(count)
     groups.removeClass('display-none');
 
     for (let j = 0; j < count; j++){
@@ -50,9 +50,8 @@ function createGroupCols(count) {
         }else{
             groupRows[0].append(div);
         }
-
-
     }
+    groupCols = $('.group-col').toArray();
 }
 
 function createGroupRows(count){
@@ -66,6 +65,8 @@ function createGroupRows(count){
     }else{
         groups.append(row);
     }
+
+    groupRows = $('.group-row');
 }
 
 function genRandIndex(length){
@@ -80,10 +81,8 @@ function createElement(className, elType){
     return element;
 }
 
-function createClearButton(){
-    let button = document.createElement('button');
-
-    button.setAttribute('class', 'clear-btn draw-button btn-style border-radius border-none');
+function setClearBtn(){
+    let button = createElement('clear-btn draw-button btn-style border-radius border-none', 'button');
     button.innerHTML = '<span class="btn-text">' + 'Clear' + '</span>';
     button.setAttribute('id','clear-btn');
 
